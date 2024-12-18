@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Background Bubbles */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
+  left: 20%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  background: linear-gradient(45deg, #9be15d, #00e3ae, #8a2be2, #ff6347, #1e90ff, #9be15d);
+}
+
+.bubble:nth-child(2) {
+  left: 40%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 12s;
+  animation-delay: 4s;
+  background-color:  #9ae15d91;
+}
+
+.bubble:nth-child(3) {
+  left: 60%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+  background-color:#00e3ae4a;
+}
+
+.bubble:nth-child(4) {
+  left: 80%;
+  width: 100px;
+  height: 100px;
+  animation-duration: 14s;
+  animation-delay: 6s;
+  background-color: #892be24a;
+}
+
+.bubble:nth-child(5) {
+  left: 30%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+  background-color: #ff634757;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.3;
+  }
+  50% {
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(-120vh) scale(1.5);
+      opacity: 0;
+  }
+}
+
+/* Modern Calculator Styles with 3D effect */
+.modern-calculator {
+width: 326px;
+box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+z-index: 12;
+padding: 10px 30px 50px 30px;
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.1);
+border-top: 3px solid rgb(107 255 253);
+border-left: 4px solid rgb(64 160 57 / 85%);
+}
+
+
+.modern-display {
+width: auto;
+height: auto;
+background: transparent;
+color: white;
+border-radius: 6px;
+font-size: 27px;
+padding: 24px 22px;
+text-align: right;
+margin: 30px 0px;
+overflow: hidden;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.modern-buttons {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+}
+
+.modern-btn {
+background: transparent;
+border: none;
+border-radius: 8px;
+color: white;
+font-size: 15px;
+padding: 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.modern-btn:hover {
+background: #00000091;
+}
+
+.modern-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D effect for buttons */
+.btn-3d {
+  transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-3d:active {
+  transform: perspective(500px) translateY(5px) rotateX(15deg) rotateY(10deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clear {
+  background: #e74c3c;
+}
+
+.equal {
+  background: #2ecc71;
+}
+
+.operator {
+  background: #f39c12;
+}
